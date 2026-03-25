@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ôn tập Địa lí 9 - Đề cương HK II</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:#f5f5f5; margin:0; padding:0; }
+    header { background:#1565c0; color:#fff; padding:16px 12px; text-align:center; }
+    main { max-width:960px; margin:0 auto; padding:16px 12px 40px; }
+    h1 { margin:0 0 4px; font-size:22px; }
+    .subtitle { font-size:14px; opacity:0.9; }
+    .info-box { background:#e3f2fd; border-left:4px solid #1565c0; padding:8px 12px; margin:12px 0 12px; font-size:13px; }
+    .tabs-note { font-size:13px; color:#333; margin-bottom:8px; }
+    .tabs { display:flex; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+    .tab-btn { flex:1 1 140px; padding:8px 10px; border-radius:6px; border:1px solid #1565c0; background:#fff; color:#1565c0; font-weight:600; cursor:pointer; font-size:14px; }
+    .tab-btn.active { background:#1565c0; color:#fff; }
+    .section { display:none; }
+    .section.active { display:block; }
+    .question { background:#fff; border-radius:8px; padding:12px 12px 8px; margin-bottom:12px; box-shadow:0 1px 3px rgba(0,0,0,0.08); }
+    .q-title { font-weight:600; margin-bottom:6px; }
+    .options { display:flex; flex-direction:column; gap:4px; font-size:14px; }
+    label { cursor:pointer; }
+    .q-result { margin-top:4px; font-size:13px; min-height:18px; }
+    .q-result.correct { color:#2e7d32; }
+    .q-result.incorrect { color:#c62828; }
+    .actions { margin:18px 0; display:flex; flex-wrap:wrap; gap:8px; }
+    .btn { padding:8px 14px; border-radius:6px; border:none; cursor:pointer; font-size:14px; font-weight:600; }
+    .btn-primary { background:#2e7d32; color:#fff; }
+    .btn-secondary { background:#eeeeee; }
+    .score-box { padding:10px 12px; border-radius:6px; background:#fff3cd; border:1px solid #ffeeba; font-size:14px; margin-bottom:12px; }
+    .footer-note { font-size:12px; color:#555; margin-top:16px; }
+    .data-block { background:#fff; border-radius:8px; padding:10px 12px; margin:10px 0 14px; box-shadow:0 1px 3px rgba(0,0,0,0.06); font-size:13px; }
+    .data-block h3 { margin:0 0 6px; font-size:14px; }
+    .data-block table { width:100%; border-collapse:collapse; font-size:13px; }
+    .data-block th, .data-block td { border:1px solid #ccc; padding:4px 6px; text-align:center; }
+    .data-block caption { font-weight:600; margin-bottom:4px; }
+    @media (max-width:600px){
+      main { padding:12px 8px 32px; }
+      .question { padding:10px 10px 6px; }
+      .data-block { padding:8px 8px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ôn tập Địa lí 9 - Cuối HK II</h1>
+    <div class="subtitle">Trắc nghiệm luyện thi kiểu Azota - theo đúng đáp án đề cương</div>
+  </header>
+  <main>
+    <div class="info-box">
+      - Phần 1: 40 câu trắc nghiệm khách quan, mỗi câu 0,25 điểm (tự quy đổi theo thang điểm của bạn).<br>
+      - Phần 2: 8 ý Đúng/Sai (2 câu, mỗi câu 4 ý).<br>
+      - Bấm <strong>Chấm điểm</strong> để xem kết quả, đáp án luôn bám sát đề cương giáo viên cho.
+    </div>
+
+    <div class="tabs-note">Chọn <strong>Phần 1</strong> hoặc <strong>Phần 2: Đúng/Sai</strong> ngay bên dưới để chuyển phần làm bài.</div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-target="mcq">Phần 1: Trắc nghiệm 4 lựa chọn</button>
+      <button class="tab-btn" data-target="tf">Phần 2: Đúng / Sai</button>
+    </div>
+
+    <div id="scoreBox" class="score-box">Chưa chấm bài.</div>
+
+    <section id="mcq" class="section active">
+      <div class="data-block">
+        <h3>Bảng số liệu dùng cho Câu 38, 39, 40</h3>
+        <table>
+          <caption>SẢN LƯỢNG VÀ DIỆN TÍCH GIEO TRỒNG LÚA CỦA CÁC VÙNG VÀ CẢ NƯỚC NĂM 2023</caption>
+          <thead>
+            <tr>
+              <th>Vùng</th>
+              <th>Diện tích (nghìn ha)</th>
+              <th>Sản lượng (nghìn tấn)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Đồng bằng sông Hồng</td>
+              <td>937,0</td>
+              <td>5.815,7</td>
+            </tr>
+            <tr>
+              <td>Đồng bằng sông Cửu Long</td>
+              <td>3.838,6</td>
+              <td>24.156,4</td>
+            </tr>
+            <tr>
+              <td>Cả nước</td>
+              <td>7.119,3</td>
+              <td>43.497,7</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="margin-top:4px; text-align:left; font-size:12px;">
+          Dữ liệu trích từ Niên giám thống kê Việt Nam 2023, giống bảng trong đề cương.
+        </div>
+      </div>
+    </section>
+
+    <section id="tf" class="section">
+      <div class="data-block">
+        <h3>Bảng số liệu dùng cho Câu Đúng/Sai số 1</h3>
+        <table>
+          <caption>SẢN LƯỢNG THỦY SẢN CỦA VÙNG ĐBSCL GIAI ĐOẠN 2010–2024</caption>
+          <thead>
+            <tr>
+              <th>Năm</th>
+              <th>Nuôi trồng (nghìn tấn)</th>
+              <th>Khai thác (nghìn tấn)</th>
+              <th>Tổng sản lượng (nghìn tấn)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2010</td>
+              <td>1.986,6</td>
+              <td>1.012,5</td>
+              <td>2.999,1</td>
+            </tr>
+            <tr>
+              <td>2015</td>
+              <td>2.471,3</td>
+              <td>1.232,1</td>
+              <td>3.703,4</td>
+            </tr>
+            <tr>
+              <td>2021</td>
+              <td>3.410,5</td>
+              <td>1.508,1</td>
+              <td>4.918,6</td>
+            </tr>
+            <tr>
+              <td>2024</td>
+              <td>4.025,8</td>
+              <td>1.503,4</td>
+              <td>5.528,2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="data-block">
+        <h3>Bảng số liệu dùng cho Câu Đúng/Sai số 2</h3>
+        <table>
+          <caption>SẢN LƯỢNG VÀ DIỆN TÍCH GIEO TRỒNG LÚA CỦA CÁC VÙNG VÀ CẢ NƯỚC NĂM 2023</caption>
+          <thead>
+            <tr>
+              <th>Vùng</th>
+              <th>Diện tích (nghìn ha)</th>
+              <th>Sản lượng (nghìn tấn)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Đồng bằng sông Hồng</td>
+              <td>937,0</td>
+              <td>5.815,7</td>
+            </tr>
+            <tr>
+              <td>Đồng bằng sông Cửu Long</td>
+              <td>3.838,6</td>
+              <td>24.156,4</td>
+            </tr>
+            <tr>
+              <td>Cả nước</td>
+              <td>7.119,3</td>
+              <td>43.497,7</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button id="gradeBtn" class="btn btn-primary">Chấm điểm toàn bài</button>
+      <button id="resetBtn" class="btn btn-secondary">Làm lại từ đầu</button>
+    </div>
+
+    <div class="footer-note">
+      Gợi ý sử dụng: Mở file HTML này trong trình duyệt trên máy tính hoặc điện thoại, gửi cho học sinh làm bài trực tuyến kiểu Azota.
+    </div>
+  </main>
+
+  <script>
+    const mcqData = [
+      {n:1, text:'Tỉnh nào ở vùng Đồng bằng sông Cửu Long vừa giáp Đông Nam Bộ, vừa giáp Cam-pu-chia?', correct:'D', options:{A:'An Giang', B:'Vĩnh Long', C:'Cà Mau', D:'Đồng Tháp'}},
+      {n:2, text:'Hiện nay, vùng Đồng bằng sông Cửu Long có mấy tỉnh/thành phố?', correct:'A', options:{A:'5', B:'6', C:'10', D:'13'}},
+      {n:3, text:'Ý nào dưới đây không đúng với ngành công nghiệp của vùng Đông Nam Bộ?', correct:'B', options:{A:'Thành phố Hồ Chí Minh là trung tâm công nghiệp có quy mô lớn nhất.', B:'Cơ cấu công nghiệp đơn giản.', C:'Chiếm tỉ trọng cao nhất trong cơ cấu GRDP.', D:'Giá trị sản xuất tăng nhanh.'}},
+      {n:4, text:'Loại đất phân bố ven biển của vùng Đồng bằng sông Cửu Long là', correct:'B', options:{A:'đất phèn.', B:'đất mặn.', C:'đất cát.', D:'đất phù sa sông.'}},
+      {n:5, text:'Loại đất phân bố thành dải dọc sông Tiền và sông Hậu là', correct:'D', options:{A:'đất phèn.', B:'đất mặn.', C:'đất cát.', D:'đất phù sa sông.'}},
+      {n:6, text:'Các dân tộc ít người sinh sống chủ yếu ở Đồng bằng sông Cửu Long là', correct:'D', options:{A:'Tày, Nùng, Thái.', B:'Gia Rai, Ê Đê, Ba Na.', C:'Giáy, Dao, Mông.', D:'Khơ-me, Chăm, Hoa.'}},
+      {n:7, text:'Chủ động "Sống chung với lũ" để khai thác các nguồn lợi kinh tế do lũ hàng năm đem lại là đặc trưng của vùng nào?', correct:'D', options:{A:'Đồng bằng sông Hồng.', B:'Đồng bằng ven biển miền Trung.', C:'Vùng đồi núi.', D:'Đồng bằng sông Cửu Long.'}},
+      {n:8, text:'Ngành công nghiệp năng lượng nào không phải là thế mạnh của vùng Đồng bằng sông Cửu Long?', correct:'A', options:{A:'Thủy điện.', B:'Nhiệt điện.', C:'Điện gió.', D:'Điện mặt trời.'}},
+      {n:9, text:'Khoáng sản chủ yếu của vùng Đồng bằng sông Cửu Long là', correct:'A', options:{A:'đá vôi và than bùn, dầu mỏ, khí tự nhiên.', B:'apatit, than đá, nhôm, sắt.', C:'bôxit và crôm.', D:'sắt và thiếc.'}},
+      {n:10, text:'Điểm khác biệt về biến đổi khí hậu vùng châu thổ sông Cửu Long so với sông Hồng là?', correct:'A', options:{A:'Bị hạn hán và xâm nhập mặn nặng nề hơn.', B:'Nước lũ dâng cao hơn.', C:'Sạt lở đất nghiêm trọng hơn.', D:'Xuất hiện lốc xoáy, dông lốc hơn.'}},
+      {n:11, text:'Trở ngại lớn nhất cho việc sử dụng và cải tạo tự nhiên ở Đồng bằng sông Cửu Long là', correct:'C', options:{A:'độ cao địa hình thấp nên thường xuyên chịu tác động xâm nhập mặn của thủy triều.', B:'đất thiếu dinh dưỡng hoặc quá chặt, khó thoát nước.', C:'phần lớn diện tích là đất phèn, đất mặn lại có mùa khô sâu sắc.', D:'mạng lưới sông ngòi, kênh rạch chằng chịt gây trở ngại cho cơ giới hóa.'}},
+      {n:12, text:'Ý nào dưới đây không phải là điều kiện tự nhiên thuận lợi để Đồng bằng sông Cửu Long trở thành vùng trọng điểm lúa số một ở nước ta?', correct:'C', options:{A:'Có tiềm năng lớn về đất phù sa ngọt.', B:'Có khí hậu nhiệt đới nóng quanh năm.', C:'Có diện tích đất phèn và đất mặn lớn.', D:'Có sông ngòi dày đặc.'}},
+      {n:13, text:'Tác động của biến đổi khí hậu thể hiện rõ nhất ở vùng Đồng bằng sông Cửu Long là', correct:'B', options:{A:'nhiệt độ trung bình năm đã giảm.', B:'xâm nhập mặn vào sâu trong đất liền.', C:'mùa khô không rõ rệt.', D:'nguồn nước ngầm hạ thấp hơn.'}},
+      {n:14, text:'Mặt hàng xuất khẩu nào dưới đây không phải là thế mạnh của vùng Đồng bằng sông Cửu Long?', correct:'D', options:{A:'Gạo.', B:'Tôm.', C:'Cá Tra.', D:'Cà phê.'}},
+      {n:15, text:'Biện pháp nào không hợp lí khi sử dụng và cải tạo thiên nhiên của Đồng bằng sông Cửu Long?', correct:'D', options:{A:'Chia ô nhỏ trong đồng ruộng để thau chua, rửa mặn.', B:'Cày sâu, bừa kĩ để nâng cao độ phì cho đất.', C:'Tìm các giống lúa mới chịu được đất phèn.', D:'Khai phá rừng phòng hộ ven biển lấy đất nuôi trồng thủy sản.'}},
+      {n:16, text:'Để hạn chế tác hại của lũ, phương hướng chủ yếu hiện nay của Đồng bằng sông Cửu Long là', correct:'A', options:{A:'chủ động chung sống với lũ.', B:'tăng cường công tác dự báo lũ.', C:'đầu tư cho các dự án thoát nước.', D:'xây dựng hệ thống đê điều.'}},
+      {n:17, text:'Để đảm bảo cân bằng sinh thái, Đồng bằng sông Cửu Long cần phải', correct:'A', options:{A:'bảo vệ và phát triển rừng.', B:'cải tạo đất phèn, đất mặn.', C:'khoanh rừng kết hợp với nuôi tôm.', D:'giảm độ mặn trong đất.'}},
+      {n:18, text:'Hiện nay, vùng Đông Nam Bộ có mấy tỉnh/thành phố?', correct:'A', options:{A:'3.', B:'6.', C:'5.', D:'8.'}},
+      {n:19, text:'Vườn quốc gia nào dưới đây nằm trên đảo?', correct:'D', options:{A:'U Minh Thượng.', B:'Cát Tiên.', C:'Tràm Chim.', D:'Côn Đảo.'}},
+      {n:20, text:'Để giảm nhẹ biến đổi khí hậu và ứng phó với châu thổ sông Cửu Long cần', correct:'A', options:{A:'sử dụng tiết kiệm năng lượng, tài nguyên nước.', B:'nâng cao nhận thức của cộng đồng về biến đổi khí hậu.', C:'điều chỉnh cơ cấu cây trồng, vật nuôi.', D:'gia cố hệ thống đê sông.'}},
+      {n:21, text:'Đảo Phú Quốc - lớn nhất nước ta thuộc tỉnh nào?', correct:'D', options:{A:'Vĩnh Long.', B:'Đồng Tháp.', C:'Cà Mau.', D:'An Giang.'}},
+      {n:22, text:'Ý nào dưới đây không phải là tác động tiêu cực của biến đổi khí hậu ở Đồng bằng sông Cửu Long?', correct:'B', options:{A:'Mùa khô kéo dài.', B:'Thay đổi lượng mưa.', C:'Triều cường gia tăng.', D:'Xâm nhập mặn sâu vào đất liền.'}},
+      {n:23, text:'Ý nào dưới đây không phải là biểu hiện của biến đổi khí hậu ở Đồng bằng sông Cửu Long?', correct:'D', options:{A:'Xuất hiện các hiện tượng thời tiết cực đoan.', B:'Thay đổi nhiệt độ và lượng mưa.', C:'Mực nước biển dâng.', D:'Biển xâm nhập vào sâu trong đất liền.'}},
+      {n:24, text:'Đồng bằng sông Cửu Long được bồi đắp bởi phù sa của sông nào?', correct:'B', options:{A:'Sông Đồng Nai.', B:'Sông Mê Công.', C:'Sông Thái Bình.', D:'Sông Hồng.'}},
+      {n:25, text:'Giá trị kinh tế của rừng ngập mặn đối với đời sống nhân dân vùng Đồng bằng sông Cửu Long là', correct:'D', options:{A:'ngăn chặn sự xâm nhập mặn vào sâu trong đất liền.', B:'môi trường sống của các loài sinh vật.', C:'chắn sóng, cố định đất, mở rộng diện tích đồng bằng.', D:'cung cấp gỗ, củi, cây dược liệu và nguồn thực phẩm.'}},
+      {n:26, text:'Ý nào dưới đây không đúng với vùng Đồng bằng sông Cửu Long?', correct:'D', options:{A:'Vùng trồng cây ăn quả lớn nhất cả nước.', B:'Bình quân lương thực theo đầu người cao nhất.', C:'Diện tích và sản lượng lúa cả năm cao nhất.', D:'Có nhiều bãi tắm ven biển nhất cả nước.'}},
+      {n:27, text:'Phát biểu nào sau đây không đúng với đặc điểm khí hậu của vùng Đồng bằng sông Cửu Long?', correct:'A', options:{A:'Lượng mưa lớn, tập trung từ tháng 3 đến tháng 9.', B:'Chế độ nhiệt cao, ổn định, biên độ nhiệt năm nhỏ.', C:'Khí hậu biểu hiện rõ tính chất cận xích đạo.', D:'Tổng số giờ nắng cao, lượng mưa lớn.'}},
+      {n:28, text:'Ngành khai thác hải sản phát triển mạnh ở vùng Đồng bằng sông Cửu Long vì có', correct:'A', options:{A:'ba mặt giáp biển, ngư trường lớn.', B:'nhiều vùng trũng ngập nước.', C:'nhiều bãi triều và rừng ngập mặn.', D:'mạng lưới sông ngòi, kênh rạch dày đặc.'}},
+      {n:29, text:'Điểm khác biệt về khí hậu của Nam Bộ so với Nam Trung Bộ là', correct:'D', options:{A:'nóng quanh năm, mưa về mùa hạ.', B:'nhiệt độ cao mưa chậm dần về thu đông.', C:'mùa mưa đến muộn, ít bão.', D:'khí hậu phân thành hai mùa (mưa; khô) rõ rệt.'}},
+      {n:30, text:'Mùa khô kéo dài ở Đồng bằng sông Cửu Long gây ra hậu quả chủ yếu nào sau đây?', correct:'B', options:{A:'Hiện tượng cháy rừng diễn ra trên diện rộng.', B:'Thiếu nước ngọt cho sản xuất và sinh hoạt.', C:'Làm tăng độ chua và chua mặn trong đất.', D:'Sâu bệnh phát triển phá hoại mùa màng.'}},
+      {n:31, text:'Ý nào dưới đây không phải là đặc điểm về dân cư vùng Đồng bằng sông Cửu Long?', correct:'C', options:{A:'Đông dân, có kinh nghiệm sản xuất nông nghiệp.', B:'Gia tăng dân số tự nhiên thấp nhất cả nước.', C:'Mật độ dân số thấp, tỉ lệ dân thành thị cao.', D:'Tỉ trọng dân số từ 15-64 tuổi cao nhất.'}},
+      {n:32, text:'Vai trò chủ yếu của rừng ở Đồng bằng sông Cửu Long là gì?', correct:'B', options:{A:'Cung cấp nguồn lâm sản có nhiều giá trị kinh tế.', B:'Đảm bảo cân bằng sinh thái, phòng chống thiên tai.', C:'Giúp phát triển mô hình kinh tế nông, lâm kết hợp.', D:'Tạo thêm diện tích, môi trường nuôi trồng thủy sản.'}},
+      {n:33, text:'Cho biểu đồ cơ cấu diện tích lúa cả năm phân theo mùa vụ của nước ta, năm 2016 và 2023 (biểu đồ tròn như trong đề cương). Nhận xét nào dưới đây đúng với biểu đồ trên?', correct:'C', options:{A:'Năm 2023 so với năm 2016, tỉ trọng diện tích lúa hè thu tăng 0,4%.', B:'Tỉ trọng diện tích lúa mùa luôn cao hơn tỉ trọng diện tích lúa hè thu.', C:'Tỉ trọng diện tích lúa đông xuân luôn cao nhất.', D:'Năm 2023 so với năm 2016, tỉ trọng diện tích lúa mùa và lúa đông xuân tăng.'}},
+      {n:34, text:'Vì sao công nghiệp chế biến thực phẩm chiếm tỉ trọng cao nhất trong cơ cấu công nghiệp của Đồng bằng sông Cửu Long?', correct:'B', options:{A:'Có thế mạnh về nguồn lao động dồi dào, không yêu cầu trình độ cao.', B:'Nguyên liệu phong phú từ sản xuất nông nghiệp và ngư nghiệp.', C:'Do nhu cầu lớn của thị trường trong và ngoài nước.', D:'Cơ sở hạ tầng, cơ sở vật chất kĩ thuật phát triển.'}},
+      {n:35, text:'Đặc khu hành chính nào dưới đây không thuộc vùng Đồng bằng sông Cửu Long?', correct:'D', options:{A:'Phú Quốc.', B:'Kiên Hải.', C:'Thổ Chu.', D:'Phú Quý.'}},
+      {n:36, text:'Biện pháp nào sau đây không phù hợp với cải tạo tự nhiên ở vùng Đồng bằng sông Cửu Long?', correct:'D', options:{A:'Đẩy mạnh khai thác thủy sản khi có lũ về.', B:'Lai tạo các giống lúa chịu được phèn, mặn.', C:'Làm thủy lợi để có nước ngọt vào mùa khô rửa phèn, rửa mặn cho đất.', D:'Khai phá rừng ngập mặn để mở rộng diện tích nuôi trồng thủy sản.'}},
+      {n:37, text:'Loại hình giao thông giữ vai trò quan trọng trong đời sống và hoạt động giao lưu kinh tế của người dân vùng Đồng bằng sông Cửu Long là', correct:'B', options:{A:'đường sắt.', B:'đường thủy.', C:'đường hàng không.', D:'đường biển.'}},
+      {n:38, text:'Cho bảng số liệu phía trên: Năng suất lúa của vùng Đồng bằng sông Hồng là', correct:'B', options:{A:'62,9 tạ/ha.', B:'62,1 tạ/ha.', C:'60,5 tạ/ha.', D:'61,1 tạ/ha.'}},
+      {n:39, text:'Căn cứ vào bảng số liệu phía trên, sản lượng lúa của vùng Đồng bằng sông Cửu Long chiếm bao nhiêu % so với cả nước?', correct:'A', options:{A:'55,5%.', B:'13,4%.', C:'53,9%.', D:'16,4%.'}},
+      {n:40, text:'Căn cứ vào bảng số liệu phía trên, năng suất lúa của vùng Đồng bằng sông Cửu Long lớn hơn bao nhiêu so với cả nước?', correct:'A', options:{A:'1,8 tạ/ha.', B:'6 tạ/ha.', C:'0,8 tạ/ha.', D:'2,9 tạ/ha.'}}
+    ];
+
+    const tfData = [
+      {code:'1a', text:'Câu 1a: Sản lượng thủy sản khai thác tăng liên tục qua các năm.', correct:'Sai'},
+      {code:'1b', text:'Câu 1b: So với năm 2010, năm 2024 tổng sản lượng thủy sản tăng 1,84 lần.', correct:'Đúng'},
+      {code:'1c', text:'Câu 1c: Giai đoạn 2010-2024, sản lượng khai thác tăng nhanh hơn nuôi trồng.', correct:'Sai'},
+      {code:'1d', text:'Câu 1d: Giai đoạn 2010-2024, sản lượng thủy sản ĐBSCL luôn lớn hơn 50% so với cả nước.', correct:'Đúng'},
+      {code:'2a', text:'Câu 2a: Diện tích gieo trồng lúa của nước ta năm 2023 là 7.119,3 nghìn ha.', correct:'Đúng'},
+      {code:'2b', text:'Câu 2b: ĐBSCL là vùng có diện tích và sản lượng lúa lớn nhất cả nước.', correct:'Đúng'},
+      {code:'2c', text:'Câu 2c: Diện tích trồng lúa của ĐBSCL những năm gần đây tăng nhanh do cải tạo đất nhiễm phèn, mặn.', correct:'Sai'},
+      {code:'2d', text:'Câu 2d: Năm 2023 năng suất lúa ĐBSCL đứng thứ hai cả nước sau ĐBSH.', correct:'Sai'}
+    ];
+
+    function renderMcq(){
+      const container = document.getElementById('mcq');
+      mcqData.forEach(q => {
+        const div = document.createElement('div');
+        div.className = 'question';
+        div.dataset.correct = q.correct;
+        let html = `<div class=\"q-title\">Câu ${q.n}. ${q.text}</div>`;
+        html += '<div class="options">';
+        for (const key of ['A','B','C','D']){
+          const optText = q.options[key];
+          html += `<label><input type=\"radio\" name=\"q${q.n}\" value=\"${key}\"> ${key}. ${optText}</label>`;
+        }
+        html += '</div><div class="q-result" id="res-q'+q.n+'"></div>';
+        div.innerHTML = html;
+        container.appendChild(div);
+      });
+    }
+
+    function renderTf(){
+      const container = document.getElementById('tf');
+      tfData.forEach((q, idx) => {
+        const div = document.createElement('div');
+        div.className = 'question';
+        div.dataset.correct = q.correct;
+        const name = 'tf' + idx;
+        let html = `<div class=\"q-title\">${q.text}</div>`;
+        html += '<div class="options">';
+        html += `<label><input type=\"radio\" name=\"${name}\" value=\"Đúng\"> Đúng</label>`;
+        html += `<label><input type=\"radio\" name=\"${name}\" value=\"Sai\"> Sai</label>`;
+        html += '</div><div class="q-result" id="res-'+name+'"></div>';
+        div.innerHTML = html;
+        container.appendChild(div);
+      });
+    }
+
+    function grade(){
+      let correct = 0; let total = 0;
+      document.querySelectorAll('.question').forEach(q => {
+        const correctVal = q.dataset.correct;
+        const inputs = q.querySelectorAll('input[type="radio"]');
+        if (!inputs.length) return;
+        total += 1;
+        let chosen = null;
+        inputs.forEach(inp => { if (inp.checked) chosen = inp.value; });
+        const resEl = q.querySelector('.q-result');
+        if (!chosen){
+          resEl.textContent = 'Chưa chọn đáp án.';
+          resEl.className = 'q-result';
+        } else if (chosen === correctVal){
+          correct += 1;
+          resEl.textContent = 'Đúng.';
+          resEl.className = 'q-result correct';
+        } else {
+          resEl.textContent = 'Sai. Đáp án đúng: ' + correctVal + '.';
+          resEl.className = 'q-result incorrect';
+        }
+      });
+      const scoreBox = document.getElementById('scoreBox');
+      const percent = total ? Math.round(correct * 1000 / total) / 10 : 0;
+      const diem10 = total ? Math.round(correct * 10 * 10 / total) / 10 : 0;
+      scoreBox.textContent = `Bạn làm đúng ${correct}/${total} câu (≈ ${percent}% ) — quy ra khoảng ${diem10}/10.`;
+    }
+
+    function resetAll(){
+      document.querySelectorAll('input[type="radio"]').forEach(i => { i.checked = false; });
+      document.querySelectorAll('.q-result').forEach(r => { r.textContent = ''; r.className = 'q-result'; });
+      document.getElementById('scoreBox').textContent = 'Chưa chấm bài.';
+    }
+
+    function setupTabs(){
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const target = btn.dataset.target;
+          document.querySelectorAll('.section').forEach(sec => {
+            sec.classList.toggle('active', sec.id === target);
+          });
+          window.scrollTo({top:0, behavior:'smooth'});
+        });
+      });
+    }
+
+    renderMcq();
+    renderTf();
+    setupTabs();
+
+    document.getElementById('gradeBtn').addEventListener('click', grade);
+    document.getElementById('resetBtn').addEventListener('click', resetAll);
+  </script>
+</body>
+</html>
